@@ -1,0 +1,36 @@
+{
+  "name": "express-sequelize",
+  "version": "1.0.0",
+  "description": "Sketelon structure for Node, Express, MySQL and Sequelize",
+  "main": "index.js",
+  "engines": {
+    "node": ">=8.3.0"
+  },
+  "scripts": {
+    "start": "npm run docs && nodemon index.js",
+    "start-local": "DB_HOST=localhost DB_NAME=employees DB_USER=root DB_PASSWORD=m!grate nodemon index.js --exec 'npm run lint && node'",
+    "lint": "eslint --ignore-path .gitignore .",
+    "lint-fix": "eslint --ignore-path .gitignore --fix .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs": "apidoc -i ./ -e node_modules/ -t ./node_modules/apidoc-contenttype-plugin/template/ --parse-parsers apicontenttype=./node_modules/apidoc-contenttype-plugin/api_content_type.js"
+  },
+  "author": "Sanket Subhash Hande",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "apidoc": "^0.17.7",
+    "apidoc-contenttype-plugin": "^0.1.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "express-async-errors": "^3.1.1",
+    "joi": "^14.0.6",
+    "joi-date-extensions": "^1.2.0",
+    "jsonwebtoken": "^8.4.0",
+    "mysql2": "^1.6.4",
+    "sequelize": "^4.41.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.8.0",
+    "eslint-plugin-node": "^8.0.0",
+    "nodemon": "^1.18.5"
+  }
+}
