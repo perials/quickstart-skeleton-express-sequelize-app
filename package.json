@@ -8,7 +8,7 @@
   },
   "scripts": {
     "start": "npm run docs && nodemon index.js",
-    "start-local": "DB_HOST=localhost DB_NAME=employees DB_USER=root DB_PASSWORD=m!grate nodemon index.js --exec 'npm run lint && node'",
+    "start-local": "nodemon index.js --exec 'npm run lint && node'",
     "lint": "eslint --ignore-path .gitignore .",
     "lint-fix": "eslint --ignore-path .gitignore --fix .",
     "test": "echo \"Error: no test specified\" && exit 1",
